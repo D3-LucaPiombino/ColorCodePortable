@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2002
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ColorCode", "ColorCode\ColorCode.xproj", "{9E56B6F3-C12A-46A7-8DF8-DA8CBD8F521C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ColorCode", "ColorCode\ColorCode.csproj", "{9E56B6F3-C12A-46A7-8DF8-DA8CBD8F521C}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ColorCode.AcceptanceTests", "ColorCode.AcceptanceTests\ColorCode.AcceptanceTests.xproj", "{C83A5D69-89EC-495C-B0D0-5654B4E60BE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ColorCode.AcceptanceTests", "ColorCode.AcceptanceTests\ColorCode.AcceptanceTests.csproj", "{C83A5D69-89EC-495C-B0D0-5654B4E60BE4}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ColorCode.Facts", "ColorCode.Facts\ColorCode.Facts.xproj", "{20942B60-4926-4000-8CB9-7B8DE68D0EAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ColorCode.Facts", "ColorCode.Facts\ColorCode.Facts.csproj", "{20942B60-4926-4000-8CB9-7B8DE68D0EAC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +30,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {90FD83AB-32B9-4901-9D8C-9DA74B3D7CA5}
 	EndGlobalSection
 EndGlobal

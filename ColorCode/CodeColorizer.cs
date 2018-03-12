@@ -17,11 +17,29 @@ namespace ColorCode
         private readonly ILanguageParser languageParser;
 
         /// <summary>
+        /// 12/03/2018 - L.P
+        /// This is necessary because otherwise there is a race
+        /// when compiled languages are added to Languages.CompiledLanguages,
+        /// that result in either a NullReferenceException or a duplicated item added to the 
+        /// dictionary.
+        /// This was happening only because the tests create a new instance 
+        /// of <see cref="CodeColorizer"/> instead of reusing a singleton and under dotnet core there 
+        /// are no AppDomains and isolation by default or maybe the default for the parallelism changed 
+        /// in the updated version of xunit. 
+        /// I did choose to fix this instead of trying to find a way to change the test isolation 
+        /// mode or the disable the parallelism.
+        /// This ensure that if the user use the parameterless constructor things work correctly.
+        /// If the user use the other constructor is resposible to provide a <see cref="ILanguageParser "/> 
+        /// instance that is constructed as a singleton object graph.
+        /// </summary>
+        private static ILanguageCompiler languageCompiler = new LanguageCompiler(Languages.CompiledLanguages);
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="CodeColorizer"/> class.
         /// </summary>
         public CodeColorizer()
         {
-            languageParser = new LanguageParser(new LanguageCompiler(Languages.CompiledLanguages), Languages.LanguageRepository);
+            languageParser = new LanguageParser(languageCompiler, Languages.LanguageRepository);
         }
 
         /// <summary>

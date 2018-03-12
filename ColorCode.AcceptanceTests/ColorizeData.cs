@@ -49,7 +49,7 @@ namespace ColorCode
 
             string appPath = Path.GetDirectoryName(new Uri(Assembly.GetExecutingAssembly().CodeBase).LocalPath);
 
-            string[] dirNames = Directory.GetDirectories(Path.Combine(appPath, @"..\..\Data"));
+            string[] dirNames = Directory.GetDirectories(Path.Combine(appPath, @"..\..\..\Data"));
 
             foreach (string dirName in dirNames)
             {

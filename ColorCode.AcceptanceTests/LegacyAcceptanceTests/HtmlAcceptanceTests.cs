@@ -228,7 +228,7 @@ namespace ColorCode
         {
             string appPath = Path.GetDirectoryName(new Uri(Assembly.GetExecutingAssembly().CodeBase).LocalPath);
             
-            string source = File.ReadAllText(Path.Combine(appPath, @"..\..\LegacyAcceptanceTests\large.html"));
+            string source = File.ReadAllText(Path.Combine(appPath, @"..\..\..\LegacyAcceptanceTests\large.html"));
             
             Stopwatch sw = new Stopwatch();
             sw.Start();

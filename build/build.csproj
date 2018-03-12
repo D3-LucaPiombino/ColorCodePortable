@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>ColorCode.Build</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="GitVersion.CommandLine" Version="$(GitVersion_Version)" />
+  </ItemGroup>
+
+</Project>

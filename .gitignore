@@ -49,3 +49,4 @@ bld/
 [Ll]og/
 ColorCode.sln.cache
 *.nupkg
+/build/tools
